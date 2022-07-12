@@ -1,0 +1,87 @@
+:root {
+	--h1-u-color: rgb(0, 255, 0);
+	--code-color: #00FF00;
+	--hr-color: rgb(0, 255, 0);
+	--interactive-accent: rgb(0, 255, 0);
+	--text-accent: rgb(0, 255, 0);
+	--text-accent-hover: #FF00FF;
+	--interactive-accent-rgb: 0, 255, 0;
+	/*--text-selection: rgba(0, 255, 0, 0.8);*/
+}
+
+body {
+    font-family: Helvetica;
+    background-color: #202020;
+}
+
+#note-container {
+    display: flex;
+    justify-content: center;
+}
+
+#text-area {
+    flex: 1;
+    max-width: 900px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+hr {
+	box-shadow: 0 0 0.5em var(--hr-color);
+	border-color: rgb(0, 255, 0) !important;
+}
+
+.code-block {
+    border-radius: 10px;
+    border-color: #161616;
+    background-color: #1a1a1a;
+    padding: 10px calc(10px + 0.5em);
+    font-family: Courier;
+}
+
+code {
+	color: var(--code-color);
+    background-color: #1a1a1a;
+}
+
+code[class*="language-"] {
+	color: var(--text-normal) !important;
+}
+
+.cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code {
+	color: var(--code-color) !important;
+}
+
+.task-list-item-checkbox {
+	filter: hue-rotate(270deg) brightness(2.0);
+}
+
+.markdown-embed {
+	box-shadow: 0 0 25px rgb(0, 255, 0);
+	border-radius: 20px;
+}
+
+ul > l.task-list-item[data-task="x"] {
+	
+}
+
+.callout[data-callout="code"] {
+    --callout-color: 0, 255, 0;
+    --callout-icon: code;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+	max-width: 900px;
+}
+
+img:not([width]) {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
