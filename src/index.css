@@ -9,9 +9,15 @@
 	/*--text-selection: rgba(0, 255, 0, 0.8);*/
 }
 
+@font-face {
+    font-family: "JetBrains";
+    src: url("./JetBrains Mono Regular Nerd Font Complete Mono.ttf");
+}
+
 body {
     font-family: Helvetica;
     background-color: #202020;
+    color: #ffffff;
 }
 
 #note-container {
@@ -22,6 +28,26 @@ body {
 #text-area {
     flex: 1;
     max-width: 900px;
+    width: 100%;
+}
+
+.complete {
+    border: 2px solid #00ff00;
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.failed {
+    border: 2px solid #ff0000;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.hide {
+    display: none;
+}
+
+.link {
+    color: #00ff00;
+    text-decoration: underline;
 }
 
 h1 {
@@ -29,12 +55,23 @@ h1 {
 }
 
 p {
-    margin: 0.5em 0;
+    margin: 1em 0;
+    white-space: pre-wrap;
+}
+
+.code-block p {
+    white-space: pre;
+}
+
+.arrow {
+    font-family: "JetBrains";
 }
 
 hr {
 	box-shadow: 0 0 0.5em var(--hr-color);
-	border-color: rgb(0, 255, 0) !important;
+	border-color: rgb(0, 255, 0);
+    margin: 26px 0;
+    border-width: 2px;
 }
 
 .code-block {
@@ -42,12 +79,15 @@ hr {
     border-color: #161616;
     background-color: #1a1a1a;
     padding: 10px calc(10px + 0.5em);
-    font-family: Courier;
+    font-family: "JetBrains";
+    overflow: auto;
+    white-space: pre;
 }
 
 code {
 	color: var(--code-color);
     background-color: #1a1a1a;
+    font-family: "JetBrains";
 }
 
 code[class*="language-"] {
